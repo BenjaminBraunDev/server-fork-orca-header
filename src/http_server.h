@@ -439,7 +439,6 @@ class HTTPAPIServer : public HTTPServer {
       // TENSOR, PARAMETER type
       uint32_t index;
     };
-
     TRITONSERVER_Error* ExactMappingInput(
         const std::string& name, triton::common::TritonJson::Value& value,
         std::map<std::string, triton::common::TritonJson::Value>&
@@ -491,7 +490,6 @@ class HTTPAPIServer : public HTTPServer {
     std::shared_ptr<TRITONSERVER_InferenceRequest> inference_request_ = nullptr;
     evbuffer* buffer_ = nullptr;
   };
-
 
  protected:
   explicit HTTPAPIServer(
